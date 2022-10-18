@@ -13,6 +13,8 @@ export default function App() {
   return (
     <NavigationContainer>
       <BottomTab.Navigator screenOptions={( { route } ) => ( {
+      
+        tabBarBadgeStyle:{color:"white"},
         tabBarLabelPosition:'below-icon',
         tabBarIcon: ( { focused, color, size } ) => {
           let iconName;
@@ -31,7 +33,7 @@ export default function App() {
         },
         tabBarActiveTintColor:"tomato"
       })}>
-        <BottomTab.Screen name='Home' component={HomeScreen}  />
+        <BottomTab.Screen name='Home' component={HomeScreen} options={{  tabBarBadge: 3,}} />
         <BottomTab.Screen name='Detailed' component={DetailedScreen} />
         <BottomTab.Screen name='Settings' component={SettingsScreen} />
       </BottomTab.Navigator>
